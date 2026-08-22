@@ -33,14 +33,6 @@ function setCookieConsent(type) {
     cookieConsent = type;
 
     if (type === 'all') {
-<<<<<<< HEAD
-        localStorage.setItem('cookieConsent', type);
-        localStorage.setItem('themeMode', currentThemeMode);
-    } else {
-        localStorage.removeItem('themeMode');
-        localStorage.setItem('cookieConsent', type);
-    }
-=======
         saveThemeMode();
     } else {
         localStorage.removeItem('themeMode');
@@ -48,7 +40,6 @@ function setCookieConsent(type) {
         applyTheme();
     }
     localStorage.setItem('cookieConsent', type);
->>>>>>> 5814db1 (rewrite:通通用vite重写，详见usage)
 
     const banner = document.getElementById('cookie-banner');
     if (banner) {
